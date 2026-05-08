@@ -1,0 +1,90 @@
+{
+  "product": "health-habit-hydration-log",
+  "generatedAt": "2026-05-08T00:04:45Z",
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "records": [
+        {
+          "title": "体調・習慣・水分ログ",
+          "amount": "体調・習慣・水分ログ amount",
+          "nextAction": "水分量と体調メモから次の習慣アクションを出す",
+          "condition": "体調・習慣・水分ログ condition",
+          "reviewDate": "体調・習慣・水分ログ reviewDate",
+          "id": "hp-001"
+        }
+      ],
+      "expected": {
+        "passes": 1,
+        "failures": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "records": [
+        {
+          "amount": "体調・習慣・水分ログ amount",
+          "nextAction": "水分量と体調メモから次の習慣アクションを出す",
+          "condition": "体調・習慣・水分ログ condition",
+          "reviewDate": "体調・習慣・水分ログ reviewDate",
+          "id": "missing-001"
+        }
+      ],
+      "expected": {
+        "passes": 0,
+        "failures": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "warning",
+      "records": [
+        {
+          "title": "体調・習慣・水分ログ",
+          "amount": "体調・習慣・水分ログ amount",
+          "nextAction": "水分量と体調メモから次の習慣アクションを出す",
+          "reviewDate": "体調・習慣・水分ログ reviewDate",
+          "id": "warn-001"
+        }
+      ],
+      "expected": {
+        "passes": 0,
+        "failures": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "records": [
+        {
+          "title": "体調・習慣・水分ログ",
+          "amount": "体調・習慣・水分ログ amount",
+          "nextAction": "水分量と体調メモから次の習慣アクションを出す",
+          "condition": "体調・習慣・水分ログ condition",
+          "reviewDate": "体調・習慣・水分ログ reviewDate",
+          "id": "mixed-ok-001"
+        },
+        {
+          "title": "体調・習慣・水分ログ",
+          "amount": "体調・習慣・水分ログ amount",
+          "condition": "体調・習慣・水分ログ condition",
+          "reviewDate": "体調・習慣・水分ログ reviewDate",
+          "id": "mixed-bad-001"
+        },
+        {
+          "title": "体調・習慣・水分ログ",
+          "amount": "体調・習慣・水分ログ amount",
+          "nextAction": "水分量と体調メモから次の習慣アクションを出す",
+          "reviewDate": "体調・習慣・水分ログ reviewDate",
+          "id": "warn-001"
+        }
+      ],
+      "expected": {
+        "passes": 1,
+        "failures": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
