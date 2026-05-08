@@ -1,0 +1,14 @@
+{
+  "product": "health-habit-hydration-log",
+  "title": "体調・習慣・水分ログ",
+  "domain": "AndroidApp",
+  "ideaNo": 2,
+  "platformType": "android-emulator",
+  "expectedPublicTarget": "Google Play",
+  "browser": null,
+  "android": {
+    "packageName": "com.sunmax0731.healthhabithydrationlog",
+    "evidence": "dist/android-emulator-result.json"
+  },
+  "evidence": "dist/platform-runtime-gate-result.json"
+}
